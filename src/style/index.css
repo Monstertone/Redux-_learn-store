@@ -21,6 +21,7 @@ body {
 }
 
 .search-bar {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -45,5 +46,9 @@ body {
 
 .totals {
   text-align: center;
+}
+
+.stars {
+  padding-bottom: 10px;
 }
 

@@ -25,10 +25,6 @@ camerasInCart = () => {
   return this.props.cameras.filter(camera => camera.inCart)
 }
 
-// camerasOnSale = () => {
-//   return this.props.cameras.filter(camera => camera.onSale)
-// }
-
 searchedCameras = () => {
   return this.props.cameras.filter(camera => camera.name)
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToCart } from '../actions/index'
-// import ReactStars from 'react-stars'
+import ReactStars from 'react-stars'
 
 class Camera extends Component {
     handleClick = (event) => {
@@ -18,7 +18,7 @@ class Camera extends Component {
                     className="camera-photo"
                     alt="camera" 
                     src={this.props.camera.picture} />
-                <h5>Rating: {this.props.camera.rating} stars</h5>
+                <ReactStars value={this.props.camera.rating} count={5} color={'#ffd700'} size={28} className="stars" />
                 <button 
                     type="submit" 
                     value="submit" 
