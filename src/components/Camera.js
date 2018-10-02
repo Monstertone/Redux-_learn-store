@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToCart } from '../actions/index'
+// import ReactStars from 'react-stars'
 
 class Camera extends Component {
     handleClick = (event) => {
@@ -12,6 +13,7 @@ class Camera extends Component {
             <div className="camera-display-styling">
                 <h3>{this.props.camera.name}</h3>
                 <h4>Price: {this.props.camera.price}</h4>
+                <p>{this.props.camera.onSale ? 'ON SALE' : ''}</p>
                 <img 
                     className="camera-photo"
                     alt="camera" 

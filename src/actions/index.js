@@ -15,16 +15,6 @@ export const getCameras = () => {
     }
 }
 
-export const searchCameras = (id) => {
-    return dispatch => {
-        axios.get(`http://localhost:8082/api/cameras/${id}`)
-        .then(response => dispatch ({
-            type: SEARCH_CAMERAS,
-            payload: response.data
-        }))    
-    }
-}
-
 export const addToCart = (id) => {
     return dispatch => {
        dispatch({
@@ -42,13 +32,3 @@ export const removeFromCart = (id) => {
        }) 
     }
 }
-
-// export const removeFromCart = (id) => {
-//     return dispatch => {
-//         axios.patch(`http://localhost:8082/api/cameras/${id}/remove`)
-//         .then(response => dispatch ({
-//             type: REMOVE_FROM_CART,
-//             payload: response.data
-//         })) 
-//     }
-// }

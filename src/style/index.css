@@ -26,7 +26,8 @@ body {
 
 .shopping-cart {
   border: 1px solid lightgrey;
-  padding-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .shopping-cart-header {
@@ -41,3 +42,8 @@ body {
 .cart-item {
   text-align: center;
 }
+
+.totals {
+  text-align: center;
+}
+

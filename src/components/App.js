@@ -9,12 +9,28 @@ import { Container, Row, Col } from 'reactstrap'
 
 
 class App extends Component {
-  componentDidMount() {
-    this.props.getCameras()
+  constructor(props){
+    super(props);
+
+    this.state = {
+        search: ''
+    }
+}
+
+componentDidMount() {
+  this.props.getCameras()
 }
 
 camerasInCart = () => {
   return this.props.cameras.filter(camera => camera.inCart)
+}
+
+// camerasOnSale = () => {
+//   return this.props.cameras.filter(camera => camera.onSale)
+// }
+
+searchedCameras = () => {
+  return this.props.cameras.filter(camera => camera.name)
 }
 
   render() {
@@ -22,7 +38,7 @@ camerasInCart = () => {
       <div>
         <Navbar />
         <Container>
-          <SearchBar />
+          <SearchBar search={this.state.search} />
             <Row>
               <Col>
                 <CameraList />

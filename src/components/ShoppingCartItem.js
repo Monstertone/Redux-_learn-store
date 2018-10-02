@@ -11,7 +11,7 @@ class ShoppingCart extends Component {
         return ( 
             <div>
                 <div>
-                    <h6 className="cart-item">{this.props.item.name}  <span><i className="fas fa-trash" id={this.props.item.id} onClick={this.handleClick}></i></span></h6>
+                    <h5 className="cart-item">{this.props.item.name}  <span><i className="fas fa-trash" id={this.props.item.id} onClick={this.handleClick}></i></span></h5>
                 </div>   
             </div>    
         )
