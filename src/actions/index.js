@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export const GET_CAMERAS = 'GET_CAMERAS'
-export const SEARCH_CAMERAS = 'SEARCH_CAMERAS'
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 
@@ -32,3 +31,4 @@ export const removeFromCart = (id) => {
        }) 
     }
 }
+

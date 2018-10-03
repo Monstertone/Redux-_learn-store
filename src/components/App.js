@@ -17,6 +17,12 @@ class App extends Component {
     }
 }
 
+updateSearchState = (search) => {
+  this.setState({
+    search: search
+  })
+}
+
 componentDidMount() {
   this.props.getCameras()
 }
@@ -25,19 +31,15 @@ camerasInCart = () => {
   return this.props.cameras.filter(camera => camera.inCart)
 }
 
-searchedCameras = () => {
-  return this.props.cameras.filter(camera => camera.name)
-}
-
   render() {
     return (
       <div>
         <Navbar />
         <Container>
-          <SearchBar search={this.state.search} />
+          <SearchBar search={this.state.search} updateSearch={this.updateSearchState} />
             <Row>
               <Col>
-                <CameraList />
+                <CameraList search={this.state.search} />
               </Col>
               <Col>
                 <ShoppingCartList items={this.camerasInCart()}/>
