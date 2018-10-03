@@ -3,8 +3,9 @@ import ShoppingCart from './ShoppingCartItem'
 
 class ShoppingCartList extends Component {
     render(){
+
         let cameras = this.props.items.map(item => <ShoppingCart key={item.id} item={item} />)
-        console.log('cameras in cart', cameras)
+        // console.log('cameras in cart', cameras)
 
         const subtotal = this.props.items.filter(item => item.inCart)
         let modifiedSubtotal = subtotal.reduce((acc, item) => acc + parseFloat(item.price.replace(/,/g, '').slice(1)), 0)
@@ -24,7 +25,7 @@ class ShoppingCartList extends Component {
                 <p className="totals">Total: ${`${total.toFixed(2)}`}</p>
                 <div className="checkout-btn"><button 
                     type="submit" 
-                    value="submit"
+                    onClick={(event)=>event.preventDefault()}
                     className="btn btn-outline-success my-2 my-md-0">Checkout</button></div>
             </div>
         )
